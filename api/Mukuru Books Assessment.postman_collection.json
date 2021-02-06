@@ -1,0 +1,315 @@
+{
+	"info": {
+		"_postman_id": "2464ff1d-af12-4a54-aaca-a9c3ec05460e",
+		"name": "Mukuru Books Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authors",
+			"item": [
+				{
+					"name": "Fetch all authors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.localtest.me:8080/authors",
+							"protocol": "http",
+							"host": [
+								"api",
+								"localtest",
+								"me"
+							],
+							"port": "8080",
+							"path": [
+								"authors"
+							]
+						},
+						"description": "Return a list of all authors"
+					},
+					"response": [
+						{
+							"name": "Fetch all authors",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/books",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.15.3"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Feb 2019 06:08:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "349"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.11"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":\"1\",\"author_id\":\"1\",\"title\":\"The old man and the sea\"},{\"id\":\"2\",\"author_id\":\"1\",\"title\":\"A Farewell to Arms\"},{\"id\":\"3\",\"author_id\":\"2\",\"title\":\"Pride and Prejudice\"},{\"id\":\"4\",\"author_id\":\"2\",\"title\":\"Sense and Sensibility\"},{\"id\":\"5\",\"author_id\":\"3\",\"title\":\"Roughing It\"},{\"id\":\"6\",\"author_id\":\"3\",\"title\":\"The Adventures of Tom Sawyer\"}]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "Fetch all books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.localtest.me:8080/books",
+							"protocol": "http",
+							"host": [
+								"api",
+								"localtest",
+								"me"
+							],
+							"port": "8080",
+							"path": [
+								"books"
+							]
+						},
+						"description": "Return a list of all books"
+					},
+					"response": [
+						{
+							"name": "Fetch all books",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/books",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.15.3"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Feb 2019 06:08:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "349"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.11"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":\"1\",\"author_id\":\"1\",\"title\":\"The old man and the sea\"},{\"id\":\"2\",\"author_id\":\"1\",\"title\":\"A Farewell to Arms\"},{\"id\":\"3\",\"author_id\":\"2\",\"title\":\"Pride and Prejudice\"},{\"id\":\"4\",\"author_id\":\"2\",\"title\":\"Sense and Sensibility\"},{\"id\":\"5\",\"author_id\":\"3\",\"title\":\"Roughing It\"},{\"id\":\"6\",\"author_id\":\"3\",\"title\":\"The Adventures of Tom Sawyer\"}]"
+						}
+					]
+				},
+				{
+					"name": "Create new book",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.localtest.me:8080/books/create?title=Api Title Test&author_id=2&price[ZAR]=99.49",
+							"protocol": "http",
+							"host": [
+								"api",
+								"localtest",
+								"me"
+							],
+							"port": "8080",
+							"path": [
+								"books",
+								"create"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Api Title Test"
+								},
+								{
+									"key": "author_id",
+									"value": "2"
+								},
+								{
+									"key": "price[ZAR]",
+									"value": "99.49"
+								}
+							]
+						},
+						"description": "Create a new book with price"
+					},
+					"response": [
+						{
+							"name": "Create new book",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/books/create?title=Api Title Test&author_id=2&price[ZAR]=99.49",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"books",
+										"create"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "Api Title Test"
+										},
+										{
+											"key": "author_id",
+											"value": "2"
+										},
+										{
+											"key": "price[ZAR]",
+											"value": "99.49"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.15.3"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Feb 2019 06:09:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.11"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":\"7\",\"author_id\":\"2\",\"title\":\"Api Title Test\"}]"
+						}
+					]
+				}
+			]
+		}
+	]
+}

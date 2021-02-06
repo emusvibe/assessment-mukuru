@@ -1,0 +1,15 @@
+{
+  "name": "mukuru/assessment-api",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "Api\\": "./src/"
+    }
+  },
+  "require": {
+    "ext-pdo": "*",
+    "ext-json": "*",
+    "slim/slim": "^3.12",
+    "robmorgan/phinx": "^0.10.6"
+  }
+}

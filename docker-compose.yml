@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  nginx:
+    build:
+      context: ./docker/nginx/
+    working_dir: /var/www
+    volumes:
+      - ./api:/var/www/api
+      - ./app:/var/www/app
+    ports:
+      - 8080:80
+    networks:
+      default:
+        aliases:
+          - api.localtest.me
+  api:
+    build:
+      context: ./docker/api/
+    working_dir: /var/www/api
+    volumes:
+      - ./api:/var/www/api
+  app:
+    image: php:7-fpm-alpine
+    working_dir: /var/www/app
+    volumes:
+      - ./app:/var/www/app
+  database:
+    image: mysql:5.7
+    volumes:
+      - assess_db:/var/lib/mysql
+    environment:
+      - "MYSQL_DATABASE=assess_db"
+      - "MYSQL_ROOT_PASSWORD=secret"
+    ports:
+      - 33066:3306
+volumes:
+  assess_db:
